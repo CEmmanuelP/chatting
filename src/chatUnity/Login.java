@@ -17,7 +17,7 @@ class Screen extends JFrame implements ActionListener, ItemListener, Runnable{
     static Font font1;
     static Color color1;
 
-    Home2 link1;
+    Home link1;
     String ip, id;
 
     String[] font = {"글꼴을 고르세요", "굴림", "궁서", "바탕", "돋움", "맑은 고딕"};
@@ -124,7 +124,7 @@ class Screen extends JFrame implements ActionListener, ItemListener, Runnable{
                 int respon  = JOptionPane.showConfirmDialog(jbLogin, "위와 같은 설정내용으로 \n  채탱방에 입장하시겠습니까?", "로그인", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
                 if(respon == 0) {
                     this.setVisible(false);
-                    new Home2("localhost",jtf1.getText(),font1,color1);
+                    new Home("localhost",jtf1.getText(),font1,color1);
                 } else if (respon == 1) {
                     //	JOptionPane.showMessageDialog(jbLogin, "취소되었습니다.");
                 }
@@ -141,21 +141,21 @@ class Screen extends JFrame implements ActionListener, ItemListener, Runnable{
         if(e.getItem().equals("바탕")){
             jl5.setFont(new Font("바탕", Font.BOLD, 25));
             font1 = new Font("바탕", Font.BOLD, 25);
-        };
+        }
 
         if(e.getItem().equals("굴림")){
             jl5.setFont(new Font("굴림", Font.BOLD, 25));
             font1 = new Font("굴림", Font.BOLD, 25);
-        };
+        }
 
         if(e.getItem().equals("돋움")){
             jl5.setFont(new Font("돋움", Font.BOLD, 25));
             font1 = new Font("돋움", Font.BOLD, 25);
-        };
+        }
         if(e.getItem().equals("맑은 고딕")){
             jl5.setFont(new Font("맑은 고딕", Font.BOLD, 25));
             font1 = new Font("맑은 고딕", Font.BOLD, 25);
-        };
+        }
 
     }
 

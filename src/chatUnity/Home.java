@@ -17,7 +17,9 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 //오브젝트인풋스트림으로 서버로부터 인원수 받아서 출력해줘야함 //////////////////////////////////////////////////////////////
-class Home2 extends JFrame implements ActionListener{
+
+public class Home extends JFrame implements ActionListener{
+
     String ip;
     String id;
     Font font;
@@ -35,7 +37,7 @@ class Home2 extends JFrame implements ActionListener{
 
 
 
-    public Home2(String ip,String id,Font font,Color color) {
+    public Home(String ip,String id,Font font,Color color) {
         this.ip = ip;
         this.id = id;
         this.font = font;
@@ -167,13 +169,5 @@ class Home2 extends JFrame implements ActionListener{
 
     }
 
-}
-
-public class Home {
-
-    public static void main(String[] args) {
-
-
-    }
 
 }
