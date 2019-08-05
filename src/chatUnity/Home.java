@@ -47,6 +47,7 @@ class Home2 extends JFrame implements ActionListener{
         jl2 = new JLabel("\'닉네임\' 님 로그인하셨습니다.");
         jl3 = new JLabel("현재 접속중인 인원은 \'list.getSize()\' 명 입니다.");
 
+
         jbLogout = new JButton("Logout");
         jbLogout.addActionListener(this);
 

@@ -7,17 +7,20 @@ import java.util.*;
 public class MultiServer {
     private ArrayList<MultiServerThread> list;
     private Socket socket;
-
+    private Socket socket2;
+    private int listcount;
     public MultiServer() throws IOException {
 
-        list = new ArrayList<MultiServerThread>();//사용자 목록 객체
-        ServerSocket serverSocket = new ServerSocket(1771);//서버(소켓) 생성
+        list = new ArrayList<MultiServerThread>();
+        ServerSocket serverSocket = new ServerSocket(1771);
+        ServerSocket serverSocket2 = new ServerSocket(1773);
         MultiServerThread mst = null;
 
         boolean isStop = false;
         while (!isStop) {//true
             System.out.println("Server ready...");
-            socket = serverSocket.accept();//서버 받음
+            socket = serverSocket.accept();
+            socket2 = serverSocket2.accept();
             System.out.println("start");
             mst = new MultiServerThread(this);
             list.add(mst);
@@ -81,13 +84,13 @@ class MultiServerThread implements Runnable {
         }
     }
 
-    public void broadCasting(String message) throws IOException {//모두에게 뿌려주는
+    public void broadCasting(String message) throws IOException {
         for (MultiServerThread ct : ms.getList()) {
             ct.send(message);
         }
     }
 
-    public void send(String message) throws IOException {//출력용
+    public void send(String message) throws IOException {
         oos.writeObject(message);
     }
 

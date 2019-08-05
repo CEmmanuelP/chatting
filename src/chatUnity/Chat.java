@@ -196,21 +196,6 @@ public class Chat implements ActionListener{
     }
 
 
-
-    public void vote() {
-        votef = new JFrame("강퇴투표");
-        votef.setBounds(900, 500, 130, 100);
-        btagree = new JButton("찬성");
-        btdisagree = new JButton("반대");
-        votef.add(btagree, BorderLayout.WEST);
-        votef.add(btdisagree, BorderLayout.EAST);
-        votef.setVisible(true);
-        btagree.addActionListener(this);
-        btdisagree.addActionListener(this);
-
-
-    }
-
     public static void main(String[] args) {
 
     }
